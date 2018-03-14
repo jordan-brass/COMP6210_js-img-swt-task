@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<body>
+        <img src = "" id="Bearcave">
+
+    <button id ="changelist">Change the Image</button>
+
+    <script>
+        let bear = ["https://placebear.com/g/500/500.jpg", "http://placekitten.com/g/200/200", "http://placekitten.com/g/300/200", "http://placekitten.com/g/500/500"]
+        let i = 0
+        let bearcave = document.querySelector('#Bearcave')
+        console.log(bear[0])
+        bearcave.setAttribute("src", bear[0])
+        
+        
+        
+        function changingTheImage() 
+        {
+            if(i+1 < bear.length)
+            {
+                console.log(bear.length)
+                i++
+                bearcave.setAttribute("src", bear[i])
+            }
+            else
+            {
+                i = 0
+                bearcave.setAttribute("src", bear[i])
+            }
+            
+        }
+
+
+        let btn = document.querySelector('#changelist')
+
+        console.log(btn)
+        
+        btn.addEventListener('click', changingTheImage)
+       
+    </script>
+</body>
+</html>
